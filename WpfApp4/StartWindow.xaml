@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp4.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/meme.jpg"/>
+        </Grid.Background>
+        <Button Content="КЛИЕНТ" HorizontalAlignment="Left" Margin="167,292,0,0" VerticalAlignment="Top" Height="59" Width="108" Click="Client_Click_1"/>
+        <Button Content="АДМИН" HorizontalAlignment="Left" Margin="531,292,0,0" VerticalAlignment="Top" Height="59" Width="108" Click="admin_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="249" FontSize="36" Foreground="White"><Run Text="ПОДАЙ НА 16"/><LineBreak/><Run Language="ru-ru" Text="автосервис"/><LineBreak/><Run/></TextBlock>
+
+
+    </Grid>
+</Window>
