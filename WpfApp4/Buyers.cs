@@ -10,8 +10,8 @@ namespace WpfApp4
     public class Buyers
     {
         [Key]
-        public string NameClients { get; set; }
-        public string NameDescription { get; set; }
+        public string? NameClients { get; set; }
+        public string? NameDescription { get; set; }
 
     }
 }

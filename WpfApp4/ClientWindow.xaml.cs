@@ -20,31 +20,31 @@ namespace WpfApp4
     /// </summary>
     public partial class ClientWindow : Window
     {
-        ApplicationContext2 db = new ApplicationContext2();
+        ApplicationContext db = new ApplicationContext();
         public ClientWindow()
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
         }
-        
+
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             // гарантируем, что база данных создана
             db.Database.EnsureCreated();
             // загружаем данные из БД
-            db.Buyers.Load();
+            db.Services.Load();
             // и устанавливаем данные в качестве контекста
-            DataContext = db.Buyers.Local.ToObservableCollection();
+            DataContext = db.Services.Local.ToObservableCollection();
         }
-
+        ApplicationContext2 db1 = new ApplicationContext2();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Zapuys zap = new Zapuys(new Buyers());
             if (zap.ShowDialog() == true)
             {
                 Buyers bayers = zap.Buyers;
-                db.Buyers.Add(bayers);
-                db.SaveChanges();
+                db1.Buyers.Add(bayers);
+                db1.SaveChanges();
             }
 
         }
